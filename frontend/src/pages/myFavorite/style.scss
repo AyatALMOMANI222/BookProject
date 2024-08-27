@@ -1,0 +1,88 @@
+.my-favorite-page {
+  width: calc(100% - 4rem);
+  overflow: hidden;
+  padding: 1rem 2rem;
+
+  .my-favorite-title {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .favorite-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    th,
+    td {
+      padding: 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      color: #333;
+    }
+
+    th {
+      background-color: #ff6b6b;
+      color: #fff;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .favorite-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .remove-btn {
+      background-color: #ff6b6b;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 0.8rem;
+      color: white;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ff4757;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  @media (max-width: 896px) {
+    .my-favorite-page {
+      padding: 0;
+      background-color: red;
+    }
+    .favorite-table {
+      th,
+      td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .favorite-image {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

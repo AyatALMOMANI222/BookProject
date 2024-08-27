@@ -1,0 +1,84 @@
+.book-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  width: 100%;
+
+  .book-list {
+    width: 100%;
+    display: grid;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.2rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+
+  .book-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 210px;
+    margin: auto;
+    &.small {
+      width: 180px;
+    }
+  }
+
+  .book-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .book-info {
+    padding: 0.8rem;
+  }
+
+  .book-name {
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  .book-description {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0;
+  }
+
+  .book-price {
+    font-size: 1rem;
+    color: #ff6b6b;
+    font-weight: bold;
+  }
+  .add-to-favorite-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff4757);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
