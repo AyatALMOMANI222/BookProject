@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,8 +11,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('book', function (Blueprint $table) {
-            $table->string('author')->nullable();
-
+            $table->text('image')->nullable(); // أضف العمود image
+            $table->text('description')->nullable(); // أضف العمود description
         });
     }
 
@@ -23,8 +22,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('book', function (Blueprint $table) {
-            $table->dropColumn('author');
-
+            $table->dropColumn('image'); // حذف العمود image
+            $table->dropColumn('description'); // حذف العمود description
         });
     }
 };

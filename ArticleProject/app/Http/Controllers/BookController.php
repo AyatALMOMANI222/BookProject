@@ -100,4 +100,21 @@ class BookController extends Controller
         $books = Book::where('user_id', $user->id)->get();
         return response()->json($books, 200);
     }
+
+
+    public function show($id)
+{
+    // الحصول على المستخدم الحالي
+    $user = Auth::user();
+
+    // البحث عن الكتاب بناءً على id و user_id
+    $book = Book::where('id', $id)->where('user_id', $user->id)->first();
+
+    if ($book) {
+        return response()->json($book, 200);
+    }
+
+    return response()->json(['message' => 'Book not found or unauthorized'], 404);
+}
+
 }

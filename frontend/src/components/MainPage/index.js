@@ -54,7 +54,7 @@ const MainPage = () => {
         <div className="main">
           <Input
             lable={"Full Name"}
-            placeholder={"e.g. hedaya almomani"}
+            placeholder={"e.g. Ayat almomani"}
             inputValue={inputValue}
             setInputValue={setInputValue}
             icon={arrowBottom}

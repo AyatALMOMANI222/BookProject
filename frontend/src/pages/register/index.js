@@ -28,6 +28,7 @@ const RegisterPage = () => {
       password_confirmation : passwordCon,
     };
 
+
     try {
       const response = await axiosInstance.post(url, userData);
       if (
@@ -35,7 +36,7 @@ const RegisterPage = () => {
         response.data.message === "Account Created Successfully"
       ) {
         toast.success(response.data.message);
-        navigate("/login"); // Redirect to login page on successful registration
+        navigate("/login"); 
       } else {
         toast.error(response.data.message);
       }
@@ -129,7 +130,7 @@ const RegisterPage = () => {
           />
         </div>
         <div className="register-btn-container">
-          <button className="register-btn" type="submit" onClick={()=>navigate("/login")}>
+          <button className="register-btn" type="submit">
             Register
           </button>
         </div>

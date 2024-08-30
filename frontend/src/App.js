@@ -9,6 +9,11 @@ import NavBar from "./components/Navbar";
 import MyFavorite from "./pages/myFavorite";
 import AboutUs from "./pages/aboutUs";
 import CreateNewBook from "./pages/createBook";
+import SingleBook from "./components/SingleBook";
+import Adminn from "./pages/admin";
+import CreateBook from "./components/create";
+import CreateBook2 from "./components/create";
+import Dashboard from "./components/Dashboard"
 
 const App = () => {
   useEffect(() => {
@@ -38,8 +43,15 @@ const App = () => {
         <Route path="/favorite" element={<MyFavorite />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/create" element={<CreateNewBook />} />
+        <Route path="/createbook" element={<CreateBook2 />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path={`/singlebook/:bookId`} element={<SingleBook />} />
+        {/* <Route path="/admin/*" element={<Adminn />} /> */}
 
       </Routes>
+
+
     </div>
   );
 };

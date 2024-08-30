@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Input from "../../CoreComponent/Input";
 import FileUpload from "../../CoreComponent/FileUpload";
+import { useNavigate } from "react-router-dom";
 import "./style.scss";
 
 const CreateNewBook = () => {
@@ -9,7 +10,7 @@ const CreateNewBook = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [bookImage, setBookImage] = useState(null); // تأكد من أن bookImage تبدأ بقيمة null
-
+const navigate=useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
 console.log(bookImage);
@@ -35,6 +36,8 @@ console.log(bookImage);
     })
       .then((response) => {
         console.log("Book created successfully:", response.data);
+        navigate("/")
+
       })
       .catch((error) => {
         console.error("There was an error creating the book!", error);
@@ -73,11 +76,10 @@ console.log(bookImage);
 
         <FileUpload
           label="Select an Image"
-          allowedExtensions={["jpg", "png"]}
           inputValue={bookImage}
           setInputValue={setBookImage}
         />
-        <button type="submit" className="submit-btn">
+        <button type="submit" className="submit-btn" >
           Create Book
         </button>
       </form>

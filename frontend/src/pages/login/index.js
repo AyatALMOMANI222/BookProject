@@ -31,7 +31,7 @@ const LoginPage = () => {
         
       }
       toast.success(response?.data?.message || "Login successful");
-      navigate("/dashboard"); // أو أي مسار تود توجيه المستخدم إليه بعد تسجيل الدخول
+      navigate("/"); // أو أي مسار تود توجيه المستخدم إليه بعد تسجيل الدخول
     } catch (error) {
       console.error("Login error:", error);
       const errorMessage = error.response?.data?.message || "An error occurred. Please try again.";
@@ -105,8 +105,8 @@ const LoginPage = () => {
           />
         </div>
         <div className="login-btn-container">
-          <button className="login-btn" type="submit" onClick={()=> navigate("/")
-}>
+          <button className="login-btn" type="submit" 
+>
             Login
           </button>
         </div>

@@ -28,3 +28,4 @@ Route::get('/cart', [CartController::class, 'getCartByUserId']);
 Route::middleware('auth:sanctum')->post('/cart/add-book', [BookCartController::class, 'addBookToCart']);
 Route::middleware('auth:sanctum')->delete('/cart/book', [BookCartController::class, 'deleteBookFromCart']);
 Route::middleware('auth:sanctum')->get('/cart/myBook', [CartController::class, 'getBooksFromCart']);
+Route::middleware('auth:sanctum')->get('/one/{id}', [BookController::class, 'show']);

@@ -35,6 +35,14 @@ class UserController extends Controller
         ]);
         return response()->json(['message' => 'User and Cart created successfully!'], 201);
     }
+
+
+
+
+
+
+
+    
     public function getAllUsers()
     {
        

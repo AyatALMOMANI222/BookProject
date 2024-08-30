@@ -1,31 +1,31 @@
-<?php
-
+<?php 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class ModifyImageColumnInBookTable extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::table('book', function (Blueprint $table) {
-            $table->string('image')->nullable()->change();
-            $table->text('description')->nullable()->change();
-
+            $table->longText('image')->change();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::table('book', function (Blueprint $table) {
-            $table->binary('image')->change();
-
+            $table->text('image')->change(); // or another type if needed
         });
     }
-};
+}
