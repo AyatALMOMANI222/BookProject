@@ -4,16 +4,13 @@ import { ToastContainer } from "react-toastify";
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
 import HomePage from "./pages/home";
-import "./style.scss";
 import NavBar from "./components/Navbar";
 import MyFavorite from "./pages/myFavorite";
 import AboutUs from "./pages/aboutUs";
 import CreateNewBook from "./pages/createBook";
 import SingleBook from "./components/SingleBook";
-import Adminn from "./pages/admin";
-import CreateBook from "./components/create";
-import CreateBook2 from "./components/create";
-import Dashboard from "./components/Dashboard"
+import Dashboard from "./pages/Dashboard"
+import "./style.scss";
 
 const App = () => {
   useEffect(() => {
@@ -43,15 +40,10 @@ const App = () => {
         <Route path="/favorite" element={<MyFavorite />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/create" element={<CreateNewBook />} />
-        <Route path="/createbook" element={<CreateBook2 />} />
+        <Route path={`/singlebook/:bookId`} element={<SingleBook />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
-        <Route path={`/singlebook/:bookId`} element={<SingleBook />} />
-        {/* <Route path="/admin/*" element={<Adminn />} /> */}
-
       </Routes>
-
-
     </div>
   );
 };

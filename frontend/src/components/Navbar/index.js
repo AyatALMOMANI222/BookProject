@@ -41,7 +41,7 @@ const NavBar = () => {
             navigate("/create");
           }}
         >
-         Add Book
+          Add Book
         </div>
         <a
           className="option-btn"
@@ -49,6 +49,15 @@ const NavBar = () => {
         >
           Contact
         </a>
+
+        <div
+          className="option-btn"
+          onClick={() => {
+            navigate("/dashboard");
+          }}
+        >
+          Dashboard
+        </div>
       </ul>
       <div className="navbar-auth">
         <div
