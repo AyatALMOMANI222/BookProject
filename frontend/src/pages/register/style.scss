@@ -10,13 +10,12 @@
   background-repeat: no-repeat;
   .register-form {
     border-radius: 10px;
-    padding: 25px 0px;
     width: 400px;
     height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-
+    padding-bottom: 10px;
     .title {
       font-size: 28px;
       font-weight: 500;
@@ -39,7 +38,7 @@
     }
 
     .note {
-      padding: 15px 20px;
+      padding: 10px 20px;
       font-size: 13px;
       font-weight: 500;
       line-height: 20px;
@@ -48,7 +47,7 @@
     .fields-container {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 3px;
       padding: 15px 20px;
     }
   }
@@ -61,7 +60,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 10px;
 
     .register-btn {
       cursor: pointer;

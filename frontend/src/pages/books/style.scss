@@ -25,6 +25,7 @@
     transition: transform 0.3s ease;
     width: 210px;
     margin: auto;
+    padding: 10px;
     &.small {
       width: 180px;
     }
@@ -80,5 +81,20 @@
     &:focus {
       outline: none;
     }
+  }
+}
+.filter-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+  padding: 0px 30px;
+  // border: 1px solid #919191;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+
+  // border-radius: 5px;
+  // margin: 10px;
+  .input-container .text-field-container .text-field {
+    width: 450px;
   }
 }
